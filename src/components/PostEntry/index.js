@@ -1,8 +1,8 @@
 import React, { Fragment } from "react"
 import { Link, graphql } from "gatsby"
 import { Row, Col, Divider } from "antd"
-import config from "../../../config"
 import PostEntryMeta from "../PostEntryMeta"
+import config from '../../../gatsby-config'
 
 const PostEntry = ({ post }) => {
   return (
@@ -17,7 +17,7 @@ const PostEntry = ({ post }) => {
           </h2>
           <div
             dangerouslySetInnerHTML={{
-              __html: post.content ? post.content.replace(config.wordPressUrl, ``) : post.content,
+              __html: post.content ? post.content.replace(config.siteMetadata.wordPressUrl, ``) : post.content,
             }}
           />
         </Col>

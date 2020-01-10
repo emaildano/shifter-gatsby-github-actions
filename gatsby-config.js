@@ -1,8 +1,22 @@
+// const config = {
+//   wordPressUrl: `https://demo.wpgraphql.com/`,
+//   wordPressGraphQlUrl: `https://demo.wpgraphql.com/graphql/`,
+// }
+
+const config = {
+  wordPressUrl: `REPLACE_SHIFTER_URL`,
+  wordPressGraphQlUrl: `REPLACE_SHIFTER_URL/graphql/`,
+}
+
+module.exports = { config };
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Kick off your next, great Gatsby project.`,
     author: `@gatsbyjs`,
+    wordPressUrl: config.wordPressUrl,
+    wordPressGraphQlUrl: config.wordPressGraphQlUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -48,7 +62,7 @@ module.exports = {
         fieldName: `wpgraphql`,
         // url: process.env.SHIFTER_APP_URL + `/graphql/`,
         // url: `https://63239777-0e4c-473c-a1c7-73498363fcf9.app.getshifter.io:23736/graphql/`,
-        url: `REPLACE_SHIFTER_URL/graphql/`,
+        url: config.wordPressGraphQlUrl,
       },
     },
     `gatsby-transformer-sharp`,
