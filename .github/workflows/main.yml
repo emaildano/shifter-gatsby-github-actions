@@ -14,7 +14,7 @@ jobs:
         SHIFTER_USER: ${{ secrets.SHIFTER_USER }}
         SHIFTER_PASS: ${{ secrets.SHIFTER_PASS }}
         SHIFTER_SITE_ID: ${{ secrets.SHIFTER_SITE_ID }}
-    - name: Replace ShifterURL
+    - name: Replace Shifter URL
       env:
         SHIFTER_APP_URL: ${{ steps.start.outputs.shifter_app_url }}
       run:

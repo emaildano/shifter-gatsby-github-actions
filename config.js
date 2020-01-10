@@ -1,5 +1,5 @@
 const config = {
-  wordPressUrl: `https://demo.wpgraphql.com`,
+  wordPressUrl: `https://shifter-gatsby-github-actions.netlify.com`,
 }
 
 export default config
