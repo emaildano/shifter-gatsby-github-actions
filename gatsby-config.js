@@ -64,7 +64,8 @@ module.exports = {
       options: {
         typeName: `WPGraphQL`,
         fieldName: `wpgraphql`,
-        url: process.env.SHIFTER_APP_URL + `/graphql/`,
+        // url: process.env.SHIFTER_APP_URL + `/graphql/`,
+        url: `REPLACE_SHIFTER_URL/graphql/`,
       },
     },
     `gatsby-transformer-sharp`,
