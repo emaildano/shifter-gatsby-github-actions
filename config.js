@@ -1,5 +1,5 @@
 const config = {
-  wordPressUrl: `https://shifter-gatsby-github-actions.netlify.com`,
+  wordPressUrl: `REPLACE_SHIFTER_URL`,
 }
 
 export default config
