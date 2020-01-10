@@ -1,3 +1,8 @@
+const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -65,6 +70,7 @@ module.exports = {
         typeName: `WPGraphQL`,
         fieldName: `wpgraphql`,
         // url: process.env.SHIFTER_APP_URL + `/graphql/`,
+        // url: `https://63239777-0e4c-473c-a1c7-73498363fcf9.app.getshifter.io:23736/graphql/`,
         url: `REPLACE_SHIFTER_URL/graphql/`,
       },
     },
