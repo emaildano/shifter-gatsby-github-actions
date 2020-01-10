@@ -1,8 +1,3 @@
-// const config = {
-//   wordPressUrl: `https://demo.wpgraphql.com/`,
-//   wordPressGraphQlUrl: `https://demo.wpgraphql.com/graphql/`,
-// }
-
 const config = {
   wordPressUrl: `REPLACE_SHIFTER_URL`,
   wordPressGraphQlUrl: `REPLACE_SHIFTER_URL/graphql/`,
