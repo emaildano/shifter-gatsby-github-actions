@@ -28,9 +28,7 @@ const RecentPostsWidget = () => (
             {data.wpgraphql.posts.nodes.map(post => {
               return (
                 <li>
-                  {post.link}<br />
-                  {createLocalLink(post.link)} <br />
-                  <Link to={createLocalLink(post.link)}>{post.title}</Link>
+                  <Link to={`/blog` + createLocalLink(post.link)}>{post.title}</Link>
                 </li>
               )
             })}
