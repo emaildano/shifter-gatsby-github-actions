@@ -1,9 +1,16 @@
+// const config = {
+//   wordPressUrl: `REPLACE_SHIFTER_URL`,
+//   wordPressGraphQlUrl: `REPLACE_SHIFTER_URL/graphql/`,
+// }
+
+const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || `development`
+
 const config = {
-  wordPressUrl: `REPLACE_SHIFTER_URL`,
-  wordPressGraphQlUrl: `REPLACE_SHIFTER_URL/graphql/`,
+  wordPressUrl: ( activeEnv == 'production' ) ? `REPLACE_SHIFTER_URL/` : `https://127.0.0.1:8443/`,
+  wordPressGraphQlUrl: ( activeEnv == 'production' ) ? `REPLACE_SHIFTER_URL/graphql/` : `https://127.0.0.1:8443/graphql/`,
 }
 
-module.exports = { config };
+module.exports = { config }
 
 module.exports = {
   siteMetadata: {
