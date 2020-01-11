@@ -1,22 +1,24 @@
-// const config = {
-//   wordPressUrl: `REPLACE_SHIFTER_URL`,
-//   wordPressGraphQlUrl: `REPLACE_SHIFTER_URL/graphql/`,
-// }
-
-const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || `development`
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || `development`
 
 const config = {
-  wordPressUrl: ( activeEnv == 'production' ) ? `REPLACE_SHIFTER_URL/` : `https://127.0.0.1:8443/`,
-  wordPressGraphQlUrl: ( activeEnv == 'production' ) ? `REPLACE_SHIFTER_URL/graphql/` : `https://127.0.0.1:8443/graphql/`,
+  wordPressUrl:
+    activeEnv === "production"
+      ? `REPLACE_SHIFTER_URL/`
+      : `https://127.0.0.1:8443/`,
+  wordPressGraphQlUrl:
+    activeEnv === "production"
+      ? `REPLACE_SHIFTER_URL/graphql/`
+      : `https://127.0.0.1:8443/graphql/`,
 }
 
 module.exports = { config }
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project.`,
-    author: `@gatsbyjs`,
+    title: `Shifter + Gatsby + GitHub Actions`,
+    description: `Example site using Shifter, WordPress, WPGraphQL, Gatsby, Netlify, and GitHub Actions.`,
+    author: `@getshifter`,
     wordPressUrl: config.wordPressUrl,
     wordPressGraphQlUrl: config.wordPressGraphQlUrl,
   },
@@ -53,9 +55,6 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-antd`,
-      options: {
-        style: true,
-      },
     },
     {
       resolve: `gatsby-source-graphql`,
@@ -75,10 +74,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#f80759`,
+        theme_color: `#f80759`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/shifter-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
